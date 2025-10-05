@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Recipe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <div class="content-container">
+            <h1>Last Recipe</h1>
+            <h2>No Ingredients Left Behind</h2>
+
+            <div class="input-container">
+                <p>Multiple main ingredients must be comma (,) seperated!</p>
+                <input type="text" id="search-bar" maxlength="100" placeholder="Main Ingredient(s)">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="card">
+            <h2>Why This Matters:</h2>
+
+            <div class="card-text">
+                <div class="quote-container">
+                    <p>“To me, it’s sort of funny that wasting food is not taboo. It’s one of the last environmental ills that you can just get away with.”</p>
+                    <p>- Jonathan Bloom</p>
+                </div>
+
+                <p>Throughout the world, food waste is on the rise. When food is thrown away and rots, the greenhouse gas, methane is produced, contributing to our current climate crisis. Furthermore, food waste results in the excessive production of food, which utilizes water, fuel, and energy.</p>
+            </div>
+        </div>
+        <div class="card">
+            <h2>How Does <i>Last Recipe</i> Solve This Issue?</h2>
+            <div class="card-text">
+                <p><i>Last Recipe</i> aims to reduce the impact of food waste by providing users with an alternative option, rather than throwing away food: recipes that feature the main ingredient as the food they need to discard.</p>
+
+                <p>We hope that through this reduction in food waste, the environmental damage from the activity can be minimized.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="hidden modal-background">
+        <div class="hidden modal">
+            <h1 id="recipe-title"></h1>
+            <h2 id="servings"></h3>
+            
+            <div class="ingredient-container">
+                <h2>Ingredients:</h2>
+                <ol id="ingredient-list"></ol>
+            </div>
+
+            <div class="instructions-container">
+                <h2>Instructions:</h2>
+                <ol id="instructions-list"></ol>
+            </div>
+        </div>
+
+        <div class="error-modal hidden">
+            <h1>Recipe Not Found!</h1>
+        </div>
+    </div>
+    
+</body>
+</html>

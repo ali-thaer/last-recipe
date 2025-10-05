@@ -1,0 +1,313 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+:root {
+    --darkGray: #656664;
+    --azureBlue: #249ebf;
+    --darkTurquoise: #0097b2;
+}
+
+/* Section Transitions */
+
+section:first-child {
+    position: relative;
+    background-color: white;
+}
+
+section:first-child::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.998) 0%, rgba(36,158,191,0.998) 100%);
+    pointer-events: none;
+}
+
+/* Content Container */
+
+body > section {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    line-height: 1;
+
+    text-align: center;
+}
+
+.content-container > h1 {
+    font-weight: 900;
+    font-size: calc(3rem + 3vw);
+    transition: 0.3s ease-in-out;
+}
+
+.input-container > p {
+    font-size: calc(0.3em + 1vw);
+    font-weight: 600;
+    line-height: 0;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+}
+
+.content-container > h2{
+    font-weight: 700;
+    font-size: calc(1rem + 3vw);
+    color: var(--darkGray);
+    transition: 0.3s ease-in-out;
+}
+
+input {
+    background-color: var(--azureBlue);
+
+    height: calc(1rem + 3vw);
+    width: 50vw;
+    max-width: 90%;
+
+    padding: 1em;
+    color: black;
+    border: none;
+    border-radius: 1em;
+
+    margin-top: calc(1em + 1vw);
+
+    box-shadow: 0.5em 0.5em var(--darkTurquoise);
+    transition: 0.3s ease-in-out;
+}
+
+input:hover {
+    transform: scale(1.02);
+}
+
+input:active {
+    transform: scale(1.05);
+    border: none;
+}
+
+/* Card Section */
+
+body section:nth-child(2) {
+    background-color: var(--azureBlue);
+    height: 100vh;
+    min-height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    height: calc(50% + 3vw);
+    min-height: max-content;
+    width: 40%;
+    min-width: 6em;
+    padding: 1em;
+    border-radius: 1em;
+
+    box-shadow: 0 0 2em rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+
+    transition: 0.3s ease-in-out;
+}
+
+.card > h2 {
+    text-align: center;
+    font-size: calc(1em + 1vw);
+}
+
+.card p {
+    font-size: calc(0.5rem + 1vw);
+    font-weight: 400;
+}
+
+.card:hover {
+    transform: translateY(-0.3em);
+}
+
+section > .card  + .card p:nth-child(3) {
+    margin-top: 1em;
+}
+
+.quote-container {
+    font-weight: 400;
+    font-style: normal;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    margin-bottom: 1em;
+}
+
+i {
+    font-style: italic;
+}
+
+.card-text {
+    justify-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    flex: 1;
+    justify-content: center;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 600px) {
+    body section:nth-child(2) {
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    .card {
+        width: 80%;
+    }
+}
+
+/* MODALS */
+
+.modal-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: auto;
+    transition: opacity 0.2s ease-in-out;
+
+    overflow-y: auto;
+    padding: 2em;
+}
+
+.modal,
+.error-modal {
+    background-color: white;
+    padding: 2em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 1em;
+    width: 80vw;
+    min-height: 50vh;
+    max-height: 90vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    pointer-events: auto;
+    overflow-y: auto;
+
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: inset 0 0 1em var(--background),
+                0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#recipe-title {
+    text-align: center;
+}
+
+.modal h1 {
+    font-size: calc(2em + 1vw);
+}
+
+.modal h2 {
+    font-size: calc(1.5em + 1vw);
+}
+
+#ingredient-container,
+#instructions-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+#ingredient-list,
+#instructions-list {
+    list-style-position: outside;
+    padding-left: 2em;
+    text-align: left;
+    width: 100%;
+}
+
+#ingredient-list li,
+#instructions-list li {
+    text-align: left;
+    margin-bottom: 0.5em;
+    word-wrap: break-word;
+    white-space: normal;
+    padding-right: 1em;
+    font-size: calc(1rem + 1vw);
+}
+
+
+/* Z-INDEXES */
+
+.modal-background {
+    z-index: 999;
+}
+
+.modal {
+    z-index: 1001;
+}
+
+.error-modal {
+    z-index: 1000;
+}
