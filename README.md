@@ -26,6 +26,8 @@ Add Ninjas API Key
  const myAPIKey = 'INSERT API KEY HERE';
 ```
 
+**Do not commit to your fork after this step, otherwise you will leak your API key!!**
+
 ## Challenges we ran into
 One of our main challenges was designing the website to look appealing. We spent a lot of time redesigning the layout and experimenting with styles. Another big challenge was learning how to properly fetch and handle data from the API.
 
